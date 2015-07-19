@@ -9,18 +9,16 @@ public class IterativeChop {
 		int upper = y.length;
 		int mid;
 		
-		while (result == -1) {
+		while (lower != upper) {
 			mid = Math.round((lower + upper)/2);
-			if (lower == upper) {
-				return lower;
-			} else if (x < y[mid]) {
+			if (x < y[mid]) {
 				upper = mid;
 			} else {
 				lower = mid;
 			}
 		}
-
-			
+		if (x == y[lower]) return lower;
+		
 		return result;
 	}
 	
