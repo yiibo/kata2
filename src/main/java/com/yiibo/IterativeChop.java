@@ -1,8 +1,8 @@
 package com.yiibo;
 
 
-public class IterativeChop {
-	public int Chop(int x, float[] y) {
+public class IterativeChop<T> implements Chop<T> {
+	public int chop(T x, Comparable<T>[] y) {
 		
 		int result = -1;
 		int lower = 0;
@@ -21,6 +21,4 @@ public class IterativeChop {
 		
 		return result;
 	}
-	
-
 }
